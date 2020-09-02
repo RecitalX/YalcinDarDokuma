@@ -1,0 +1,79 @@
+﻿@model Kurumsal.Models.Sınıflar.Banner
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<script type="text/javascript">CKEDITOR.replace('editor')</script>
+
+<div class="container">
+
+    @using (Html.BeginForm("Edit", "Banner", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Banner</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ID)
+
+        <div class="form-group">
+
+            <div class="control-label col-md-2 my-3">
+                Başlık
+            </div>
+
+            <div class="col-md-10">
+                <input class="form-control" name="Baslik" required placeholder="Banner başlık" maxlength="100" value="@Model.Baslik">
+                <input type="hidden" name="Baslik" value="@Model.Baslik" />
+            </div>
+
+            <div class="control-label col-md-2 my-3">
+                Açıklama
+            </div>
+
+            <div class="col-md-10">
+                <input class="form-control" name="Aciklama" maxlength="100"  required placeholder="Banner açıklama" value="@Model.Aciklama">
+                <input type="hidden" name="Aciklama" value="@Model.Aciklama" />
+            </div>
+
+            <div class="control-label col-md-2 my-3">
+                Gideceği yer
+            </div>
+
+            <div class="col-md-10">
+                <input class="form-control" name="Url" required placeholder="Resme tıklandığı zaman gidecek url giriniz" value="@Model.Url">
+                <input type="hidden" name="Url" value="@Model.Url" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ResimURL, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="file" name="ResimURL" accept=".png,.jpg,.jpeg" />
+                @Html.ValidationMessageFor(model => model.ResimURL, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Onay, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.Onay)
+                    @Html.ValidationMessageFor(model => model.Onay, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-lg-offset-2 col-lg-10">
+                <button class="btn btn-primary btn-sm" type="submit">Güncelle</button>
+                <a class="text-white btn btn-danger btn-sm" href="/Banner/Index">İptal</a>
+            </div>
+        </div>
+    </div>
+
+    }
+</div>
