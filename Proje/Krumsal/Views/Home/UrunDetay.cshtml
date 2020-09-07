@@ -1,0 +1,45 @@
+﻿@model Kurumsal.Models.Sınıflar.Hizmet
+
+@{ ViewBag.Title = "HizmetDetay";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<section style="background-color:black;">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6 offset-md-3">
+                <figure>
+                    <img alt="privacy image" src="@Model.ResimURL" />
+                </figure>
+            </div>
+
+            <div id="htmlRaw" class="col-md-6 offset-md-3">
+                <h1 class="page-title" style="color: #fff;">
+                    @Model.Baslik
+                </h1>
+                <p style="color: #fff;">
+                    @Html.Raw(Model.Icerik)
+                </p>
+
+                <table class="c-product_table o-table" style="color: white">
+                    <tbody>
+                        @*<tr>
+                    <th>Boyut</th>
+                    <td>2,5 cm, 3 cm</td>
+                </tr>*@
+                        <tr>
+                            <th>Renkler</th>
+                            <td>@Model.RenkAdi</td>
+                        </tr>
+                        
+                        <tr>
+                            <th>Ürün Kodu</th>
+                            <td>@Model.UrunKodu</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</section>

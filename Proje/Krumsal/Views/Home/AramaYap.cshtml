@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Kurumsal.Models.Sınıflar.Hizmet>
+@using GridMvc.Html
+@using PagedList;
+@using PagedList.Mvc;
+@using Kurumsal.Helper;
+@{ ViewBag.Title = "AramaYap"; }
+
+
+<section class="product-list-area">
+    <div class="container">
+        <div class="row product-list">
+            <h2 class="col-12">
+                Ürünler
+            </h2>
+
+            @if (ViewBag.NotFound == null)
+            {
+                foreach (var item in Model)
+                {
+<div class="col-12 col-md-6 product-listing">
+    <a href="/ÜrünPost/@SeoHelper.ToSeoUrl(item.Baslik).ToLower()-@item.HizmetId">
+        <figure>
+            <img src="@item.ResimURL" alt="Exterior" />
+            <figcaption>@item.Baslik</figcaption>
+        </figure>
+    </a>
+</div>}
+}
+else
+{
+<div class="alert alert-info text-center mt-5" style="margin-left: 50%;transform: translate(-50%);margin-bottom:100px">
+    @ViewBag.NotFound
+</div>}
+
+        </div>
+
+    </div>
+</section>

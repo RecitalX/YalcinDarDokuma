@@ -1,0 +1,28 @@
+﻿@model Kurumsal.Models.Sınıflar.MultipleModels
+@using Kurumsal.Helper;
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model.Tub.Item1)
+{
+    <div class="col-12 col-lg-3 sub-menu-area">
+
+        <div class="h4 submenu-title">
+            <a class="main-category" href="#" role="heading">@item.HizmetKategoriAdi</a>
+            <span class="mob-expand">Aç</span>
+        </div>
+        <ul class='list-unstyled'>
+            <li class="back"><span class="back-second">Geri</span></li>
+            <li class="cat-name"><span class="mobile-title">@item.HizmetKategoriAdi</span></li>
+
+            @foreach (var k in Model.Tub.Item2.Where(x => x.HizmetKategoriId == item.HizmetKategoriId))
+            {
+                <li><a href="/ÜrünPost/@SeoHelper.ToSeoUrl(k.KategoriAdi).ToLower()/@k.ID">@k.KategoriAdi</a></li>
+
+            }
+
+        </ul>
+    </div>
+
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="59px" height="67px" viewBox="0 0 59 67" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 54.1 (76490) - https://sketchapp.com -->
+    <title>F396E327-1A61-4FB7-B14E-9DF7998BEC42@1x</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <filter x="-59.0%" y="-46.9%" width="217.9%" height="195.9%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <polygon id="path-2" points="0 0.0033960396 38.843037 0.0033960396 38.843037 48.5147545 0 48.5147545"></polygon>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="SalesRepSearch-Results" transform="translate(-1027.000000, -556.000000)">
+            <g id="Map-Marker-1" filter="url(#filter-1)" transform="translate(1037.000000, 563.000000)">
+                <g id="Group-3" transform="translate(0.000000, 0.481995)">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M38.4752815,15.4751703 C37.5460222,10.9589228 35.1424667,7.30526931 31.6430593,4.39437822 L31.6445037,4.39437822 C28.8235037,2.03898218 25.3818741,0.562675248 21.7404296,0.145447525 C14.9322815,-0.686582178 8.19491111,2.16754653 4.02142963,7.6502099 C0.8918,11.7210911 -0.514607407,16.3110812 0.169577778,21.4522 C0.71317037,25.3314475 2.47539259,28.9322198 5.19720741,31.7276455 C6.85205926,33.4751505 8.5955037,35.1634673 10.2806889,36.8711901 C12.2913556,38.8646653 14.1705778,40.9891307 15.9101704,43.2276059 C17.1663556,44.9256257 18.3320222,46.6901109 19.4009111,48.5147545 L20.7586889,46.3374079 C23.7395407,41.5446257 27.711763,37.6047347 31.6839852,33.7235465 C33.4799111,31.9532396 35.2084296,30.1378139 36.4496889,27.9017644 C38.6370593,24.1588436 39.3592815,19.7279822 38.4752815,15.4756554 L38.4752815,15.4751703 Z" id="Fill-1" fill="#231F20" mask="url(#mask-3)"></path>
+                </g>
+                <path d="M27.8446037,20.2517 C27.8446037,24.9406604 24.0721963,28.741799 19.4186778,28.741799 C14.7651593,28.741799 10.9927519,24.9406604 10.9927519,20.2517 C10.9927519,15.5627396 14.7651593,11.761601 19.4186778,11.761601 C24.0721963,11.761601 27.8446037,15.5627396 27.8446037,20.2517" id="Fill-4" fill="#FEFEFE"></path>
+            </g>
+        </g>
+    </g>
+</svg>

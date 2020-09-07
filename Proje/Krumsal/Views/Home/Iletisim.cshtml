@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Kurumsal.Models.Sınıflar.Iletisim>
+@{ Layout = null; }
+
+
+@foreach (var item in Model)
+{
+
+<div class="col-lg-5 col-md-5 col-sm-5" style="padding-top:30px; padding-bottom:30px; color: white">
+    <h4>İletişim Bilgileri</h4>
+    <p>
+        @Html.Raw(item.Adres)
+    </p>
+    <p>
+        @Html.Raw(item.Telefon)
+    </p>
+    <p>
+        @Html.Raw(item.Mail)
+    </p>
+</div>}
+

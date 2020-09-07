@@ -1,0 +1,24 @@
+﻿@model Kurumsal.Models.Sınıflar.Mesaj
+@{ ViewBag.Title = "Details";
+                Layout = "~/Views/Shared/_LayoutAdmin.cshtml"; }
+<link href="~/Content/css/Mesaj-Details.css" rel="stylesheet" />
+
+<div class="email-app mb-4 container">
+
+    <mbootstrap.zipain class="message" style="font-size: 1.2rem">
+        <div class="details">
+            <div class="header">
+
+                <div class="from">
+
+                    <p>Gönderen : <span class="font-weight-bold">@Model.AdSoyad</span></p>
+
+                    <p>İletişim numarası : <span class="font-weight-bold">@Model.Telefon</span></p>
+                    <p>Tarih : <span class="font-weight-bold">@Model.saat</span></p>
+                    <p>Konu : <span class="font-weight-bold">@Model.Konu</span></p>
+                    <blockquote>İleti : <span class="font-weight-bold">@Model.İleti</span></blockquote>
+                </div>
+            </div>
+        </div>
+    </mbootstrap.zipain>
+</div>

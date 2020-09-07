@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Kurumsal.Models.Sınıflar.Hizmet>
+@using Kurumsal.Helper;
+@{ Layout = null; }
+
+<!-- Hero Banner -->
+<section class="cmn-banner d-flex hp-banner">
+
+    <img alt="Home Banner" class="divImg" src="~/Content/img/Untitled-2.jpg"/>
+    <div class="container d-flex flex-column justify-content-end">
+        <div class="row justify-content-end">
+            <div class="col-12 col-md-6 banner-content">
+                @*<div class="title-bg">
+                    <h1 class="h3">Yalçın Dar Dokuma</h1>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ad deserunt accusamus ipsum natus aliquid.
+                    </p>
+                     <span class="/projects/university-of-natural-resources">View Project</span> 
+                </div>*@
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Home page Product listing -->
+<section class="product-list-area">
+    <div class="container">
+        <div class="row product-list">
+            <h2 class="col-12">Ürünler</h2>
+            @foreach (var item in Model)
+            {
+                <div class="col-12 col-md-6 product-listing">
+                    <a href="/ÜrünPost/@SeoHelper.ToSeoUrl(item.Baslik).ToLower()-@item.HizmetId">
+                        <figure>
+                            <img src="@item.ResimURL" alt="Exterior" />
+                            <figcaption>@item.Baslik</figcaption>
+                        </figure>
+                    </a>
+                </div>
+                            }
+
+        </div>
+
+    </div>
+</section>
