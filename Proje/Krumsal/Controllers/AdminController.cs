@@ -17,6 +17,7 @@ namespace Kurumsal.Controllers
         {
             ViewBag.Kategori = db.HizmetKategori.Count();
             ViewBag.HizmetSay = db.Hizmet.Count();
+            ViewBag.Mesaj = db.Mesaj.Count();
             return View();
         }
 

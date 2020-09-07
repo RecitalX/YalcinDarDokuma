@@ -69,15 +69,16 @@ namespace Kurumsal.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.HizmetKategoriId = new SelectList(db.HizmetKategori, "ID", "KategoriAdi", b.AltKategori);
+            ViewBag.HizmetKategoriId = new SelectList(db.AltKategori, "ID", "KategoriAdi", b.AltKategori);
             return View(b);
         }
 
         [ValidateAntiForgeryToken]
         [ValidateInput(false)]
         [HttpPost]
-        public ActionResult Edit(Hizmet m, string renk, HttpPostedFileBase ResimURL, string Renk)
+        public ActionResult Edit(Hizmet m, string renk, HttpPostedFileBase ResimURL,FormCollection form )
         {
+            m.AltKategori_ID = int.Parse(form["HizmetKategoriId"].ToString());
             var mkl = db.Hizmet.Where(x => x.HizmetId == m.HizmetId).SingleOrDefault();
 
             if (ResimURL != null)

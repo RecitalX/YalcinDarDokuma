@@ -29,7 +29,6 @@ namespace Kurumsal.Models.DB_Contect
             }
             context.SaveChanges();
 
-
             var iletişimbilgisi = new List<Iletisim>()
             {
                 new Iletisim(){Telefon="Test verisi",Mail="Test verisi",Adres="Test verisi"}
