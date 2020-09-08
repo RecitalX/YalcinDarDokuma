@@ -1,0 +1,31 @@
+
+@media all and (min-width: 900px) {
+    .fof h1 {
+        font-size: 50px;
+    }
+
+    .fof a {
+        padding: 13px;
+        font-size: 20px;
+    }
+} 
+
+
+.fof h1 {
+    font-size: 70px;
+}
+
+.fof a {
+    font-size: 40px;
+    padding: 20px;
+}
+
+    @keyframes type {
+        from {
+            box-shadow: inset -3px 0px 0px #888;
+        }
+
+        to {
+            box-shadow: inset -3px 0px 0px transparent;
+        }
+    }

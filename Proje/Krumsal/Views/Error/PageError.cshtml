@@ -1,0 +1,68 @@
+﻿@{
+    Layout = null;
+}
+<style>
+
+
+    * {
+        transition: all 0.6s;
+    }
+
+    html {
+        height: 100%;
+    }
+
+    body {
+        font-family: 'Lato', sans-serif;
+        color: #888;
+        margin: 0;
+    }
+
+    #main {
+        display: table;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+    }
+
+    .fof {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+        .fof h1 {
+            display: inline-block;
+            padding-right: 12px;
+            font-weight: lighter;
+            color: #888;
+            animation: type .5s alternate infinite;
+        }
+
+        .fof a {
+            display: inline-block;
+            padding-right: 12px;
+            background-color: #888;
+            transition: .4s all;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+        }
+
+            .fof a:hover {
+                background-color: rgba(136,136,136,.2);
+                color: #888;
+                transition: .4s all;
+            }
+</style>
+
+<link href="~/Content/css/Error.css" rel="stylesheet" />
+
+<div id="main">
+    <div class="fof">
+        <h1>Error @Response.StatusCode</h1>
+        <div>
+            <a class="fof" href="/Anasayfa">Anasayfaya Dön</a>
+        </div>
+    </div>
+</div>
+

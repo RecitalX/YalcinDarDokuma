@@ -137,11 +137,8 @@ namespace Kurumsal.Controllers
             if (ModelState.IsValid)
             {
 
-                //string massageDate = DateTime.Now.ToString("HH:mm");
-                //mesaj.saat = massageDate;
-                //KODLAR BUNLAR
-
-                mesaj.saat = DateTime.Now.Hour;
+                string massageDate = DateTime.Now.ToString("MM/dd/yyyy HH:mm");
+                mesaj.saat = massageDate;
                 db.Mesaj.Add(mesaj);
                 db.SaveChanges();
             }

@@ -45,13 +45,15 @@
                                     </div>
                                     <form class="user" method="post" action="/Admin/Login/">
                                         <div class="text-center">
-                                            @if (ViewBag.Uyari != null)
+
+                                            @if (TempData["Danger"] != null)
                                             {
-                                                <p class="alert alert-danger">@ViewBag.Uyari</p>
-                                            }
+                                        <p class="alert alert-danger">@TempData["Danger"]</p>
+                                        }
+
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" name="Eposta" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" required placeholder="Email Adres">
+                                            <input type="email" name="Eposta" class="form-control form-control-user" id="Eposta" aria-describedby="emailHelp" required placeholder="Email Adres">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" name="Sifre" class="form-control form-control-user" id="exampleInputPassword" required placeholder="Parola">

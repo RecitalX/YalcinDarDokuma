@@ -1991,3 +1991,5 @@ C:\Users\Furkan\Desktop\YalcinDarDokuma-master\Proje\Krumsal\obj\Debug\Kurumsal.
 C:\Users\Furkan\Desktop\YalcinDarDokuma-master\Proje\Krumsal\obj\Debug\Kurumsal.csproj.CopyComplete
 C:\Users\Furkan\Desktop\YalcinDarDokuma-master\Proje\Krumsal\obj\Debug\Kurumsal.dll
 C:\Users\Furkan\Desktop\YalcinDarDokuma-master\Proje\Krumsal\obj\Debug\Kurumsal.pdb
+C:\Users\Furkan\Desktop\YalcinDarDokuma-master\Proje\Krumsal\obj\Debug\Kurumsal.Migrations.Mesaj.resources
+C:\Users\isemi\Desktop\Hosting-master\Proje\Krumsal\obj\Debug\Kurumsal.Migrations.Mesaj.resources

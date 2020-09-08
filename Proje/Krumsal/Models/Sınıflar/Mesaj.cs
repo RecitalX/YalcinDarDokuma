@@ -22,6 +22,6 @@ namespace Kurumsal.Models.Sınıflar
 
         public string İleti { get; set; }
 
-        public int saat { get; set; }
+        public string saat { get; set; }
     }
 }

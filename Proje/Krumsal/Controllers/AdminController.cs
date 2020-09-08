@@ -32,20 +32,16 @@ namespace Kurumsal.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(Admin admin)
+        public ActionResult Login(Admin admin, FormCollection form)
         {
-            var login = db.Admin.Where(x => x.Eposta == admin.Eposta).SingleOrDefault();
-            if (login.Eposta == admin.Eposta && login.Sifre == Crypto.Hash(admin.Sifre, "MD5"))
-            {
-                Session["adminid"] = login.AdminId;
-                Session["eposta"] = login.Eposta;
-                Session["yetki"] = login.Yetki;
-                return RedirectToAction("Index", "Admin");
-            }
-            else
-            {
-                ViewBag.Uyari = "Kullanıcı adı yada şifre yanlış";
-            }
+                var login = db.Admin.Where(x => x.Eposta == admin.Eposta).SingleOrDefault();
+                if (login.Eposta == admin.Eposta && login.Sifre == Crypto.Hash(admin.Sifre, "MD5"))
+                {
+                    Session["adminid"] = login.AdminId;
+                    Session["eposta"] = login.Eposta;
+                    Session["yetki"] = login.Yetki;
+                    return RedirectToAction("Index", "Admin");
+                }
             return View(admin);
         }
 

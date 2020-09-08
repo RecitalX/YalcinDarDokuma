@@ -2047,6 +2047,7 @@
     <Content Include="Content\ckeditor\skins\moono-lisa\images\refresh.png" />
     <Content Include="Content\ckeditor\skins\moono-lisa\images\spinner.gif" />
     <Content Include="Content\ckeditor\styles.js" />
+    <Content Include="Content\css\Error.css" />
     <Content Include="Content\css\style7944.css" />
     <Content Include="Content\DataTables\css\autoFill.bootstrap.css" />
     <Content Include="Content\DataTables\css\autoFill.bootstrap.min.css" />
@@ -2474,6 +2475,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AltKategoriController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HizmetController.cs" />
     <Compile Include="Controllers\HizmetKategoriController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -2487,6 +2489,10 @@
     <Compile Include="Migrations\202009061642561_OLustur.cs" />
     <Compile Include="Migrations\202009061642561_OLustur.Designer.cs">
       <DependentUpon>202009061642561_OLustur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009080003201_Mesaj.cs" />
+    <Compile Include="Migrations\202009080003201_Mesaj.Designer.cs">
+      <DependentUpon>202009080003201_Mesaj.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DB-Context\Initializer.cs" />
@@ -2541,6 +2547,7 @@
     <Content Include="Views\AltKategori\Index.cshtml" />
     <Content Include="Views\Home\KategoriList.cshtml" />
     <Content Include="Views\Home\PartialViewSample.cshtml" />
+    <Content Include="Views\Error\PageError.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2555,6 +2562,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202009061642561_OLustur.resx">
       <DependentUpon>202009061642561_OLustur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009080003201_Mesaj.resx">
+      <DependentUpon>202009080003201_Mesaj.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
